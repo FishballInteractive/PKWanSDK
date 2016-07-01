@@ -314,7 +314,7 @@ case RgConstant.PAY_CANCEL:// 支付取消
 ```java
 boolean RgCommplatform.isLogined(Context context);
 ```
-##8.获取当前登陆Session
+##8.获取当前登陆验证的token
 ```java
 String RgCommplatform.getToken(Context context);
 ```
