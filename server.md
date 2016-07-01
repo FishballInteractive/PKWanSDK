@@ -21,7 +21,7 @@ PK玩SDK支付提供电话卡支付，支付宝支付和银联等多种支付方
 |OrderId|	订单ID|
 |Money	|订单金额，单位：元|
 |TranCode|	交易码|
-|EncString|	通知加密字符串其中EncString是 商户ID,订单ID,订单金额,商户密钥四个字符串连接之后用MD5加密生成的字符.EncString= MD5(MerId.OrderId.Money.AppSecret);|
+|EncString|	通知加密字符串其中EncString是 商户ID,订单ID,订单金额,商户密钥四个字符串连接之后用MD5加密生成的字符.EncString= MD5(MerId.OrderId.Money.AppSecret)(注：字符传拼接为PHP方式的写法，下同);|
 |PaymentFee	|支付金额，单位：元|
 |PaymentStatusCode|	支付状态码 (0为支付成功,只有支付成功才会通知游戏服务器)
 |Note|	即支付注释（客户端API参数中通过setNote设置） 购买时客户端应用通过API传入，原样返回给应用服务器，开发者可以利用该字段，定义自己的扩展数据。例如区分游戏服务器|
@@ -38,11 +38,9 @@ PK玩SDK支付也提供用户登录验证：
 
 |参数|含义|
 |:---|:---|
-|MerId|	商户ID|
-|Act|	4(请求编号)|
-|Uin|	用户的PK玩SDK Uid|
+|MerId  |商户ID|
 |Token	|用户的登录Token|
-|EncString	|通知加密字符串其中EncString是 商户ID,请求编号,PK玩SDK Uid,Token,商户密钥五个字符串连接之后用MD5加密生成的字符串.EncString= MD5(MerId.Act.Uin.Token.AppSecret);|
+|EncString	|通知加密字符串其中EncString是 商户ID,Token,商户密钥三个字符串连接之后用MD5加密生成的字符串.EncString= MD5(MerId.Token.AppSecret);|
 请求地址为：http://sdk.yuwan8.com/index.php/user_center
 
 游戏服务器发出请求后，PK玩SDK服务器会验证EncString是否有效,验证Token是否有效,然后返回结果给游戏服务器。
