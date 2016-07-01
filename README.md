@@ -314,18 +314,12 @@ case RgConstant.PAY_CANCEL:// 支付取消
 ```java
 boolean RgCommplatform.isLogined(Context context);
 ```
-##8.获取当前登陆账号
+##8.获取当前登陆Session
 ```java
-String RgCommplatform.getAccountNo(Context context);
-String RgCommplatform.getSessionId(Context context);
-```
-##9.获取当前登陆Session
-```java
-String RgCommplatform.getSessionKey(Context context);
-String RgCommplatform.getSession(Context context);
+String RgCommplatform.getToken(Context context);
 ```
 
-##10.上报角色、区服信息
+##9.上报角色、区服信息
 在玩家创建角色完成后调用
 ```java
  void RgCommplatform.reportRoleInfo(RgRoleInfo roleInfo)
