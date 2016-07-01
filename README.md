@@ -1,8 +1,8 @@
-#一.鱼丸互动SDK构成
+#一.PK玩SDK构成
 ------
-鱼丸互动SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成。
+PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成。
 #二.SDK接入流程简要描述
-1.获取(商户Id)AppId 和(支付密钥) Appkey以及(论坛ID)FormId。 
+1.获取(商户Id)AppId 和AppKey、(支付密钥) AppSecret以及(论坛ID)FormId
 
 2.搭建 SDK 的环境，导入 SDK 的必要文件，参见 SDK开发环境搭建。  
 
@@ -14,12 +14,12 @@
 
 6.编译应用，并首先完成自测。  
 
-7.将应用提交给鱼丸互动运营团队进行审核。  
+7.将应用提交给PK玩运营团队进行审核。  
 
 8.审核通过后，与商务人员确定应用推广的渠道相关事宜。  
 #三.SDK环境搭建
 ##1.复制SDK包里的资源到您的工程下的对应目录
-把YuWanPaySDK-x.x.x.jar包添加至构建路径，并将资源文件复制到您工程的相应目录。
+把PKWanPaySDK-x.x.x.jar包添加至构建路径，并将资源文件复制到您工程的相应目录。
 如果您的工程里没有android-support-v4.jar包的话，需要将该jar包拷贝至libs目录下，并添加至构建路径。
 ##2.1.配置AndroidManifest.xml
 **添加以下权限：**
@@ -135,7 +135,7 @@
 ```java
 void RgCommplatform.rgInit(Context context, RgAppInfo appInfo, OnInitCompleteListener 	onInitCompleteListener);
 ```
->* 用于初始化鱼丸互动SDK，在应用的主Activity中必须调用一次该方法。  
+>* 用于初始化PK玩SDK，在应用的主Activity中必须调用一次该方法。  
 
 >* Context：上下文对象，可以传入当前Activity。  
 
@@ -147,7 +147,7 @@ void RgCommplatform.rgInit(Context context, RgAppInfo appInfo, OnInitCompleteLis
 
 **使用示例：**
 ```java
-//参数分别为AppId  AppKey  论坛ID，由鱼丸互动分配
+//参数分别为AppId  AppKey  论坛ID，由PK玩运营人员分配
 RgAppInfo appInfo = new RgAppInfo("10000002", "aeb92e964c1cf89a9ddc717b9a2b9fcc", "116");
 RgCommplatform.rgInit(this, appInfo, new OnInitCompleteListener() {
 	@Override
