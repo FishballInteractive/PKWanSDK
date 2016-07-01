@@ -51,5 +51,5 @@ PK玩SDK服务器返回的参数如下：
 
 |参数|含义|
 |:---|:---|
-|ErrorCode|	错误码(0=失败,1=成功,2=MerId无效,5=EncString无效,11=Token)|
+|ErrorCode|	错误码(0=失败,1=成功,2=MerId无效,5=EncString无效,11=Token无效)|
 |ErrorDesc|	错误描述|
