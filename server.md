@@ -33,7 +33,7 @@ http:// NoticeUrl? MerId=xx&OrderId=xx&Money=xx&TranCode=xx
 ②支付失败:
 支付失败时,PK玩SDK服务器不会通知游戏服务器支付失败相关信息.
 支付失败,直接在失败页面自动调用客户端支付通知接口通知游戏支付失败.
-##3.检查用户登录SessionKey是否有效
+##3.检查用户登录Token是否有效
 PK玩SDK支付也提供用户登录验证：
 
 |参数|含义|
