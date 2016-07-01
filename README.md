@@ -21,7 +21,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 ##1.复制SDK包里的资源到您的工程下的对应目录
 把PKWanPaySDK-x.x.x.jar包添加至构建路径，并将资源文件复制到您工程的相应目录。
 如果您的工程里没有android-support-v4.jar包的话，需要将该jar包拷贝至libs目录下，并添加至构建路径。
-##2.1.配置AndroidManifest.xml
+##2.配置AndroidManifest.xml
 **添加以下权限：**
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
