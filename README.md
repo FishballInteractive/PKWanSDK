@@ -139,7 +139,7 @@ void RgCommplatform.rgInit(Context context, RgAppInfo appInfo, OnInitCompleteLis
 
 >* Context：上下文对象，可以传入当前Activity。  
 
->* appInfo：AppId和 AppKey、论坛ID等相关参数设置。(由鱼丸互动提供)  
+>* appInfo：AppId和 AppKey、论坛ID等相关参数设置。(由PK玩运营人员提供)  
 
 >* onInitCompleteListener：初始化完成后的通知回调。  
 
