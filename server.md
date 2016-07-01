@@ -1,66 +1,55 @@
-#·þÎñ¶Ë¶Ô½ÓËµÃ÷
+#æœåŠ¡ç«¯å¯¹æŽ¥è¯´æ˜Ž
 ------
-##1.ÓÎÏ·Ö§¸¶Á÷³Ì
-ÓãÍè»¥¶¯Ö§¸¶Á÷³ÌÍ¼ÈçÏÂËùÊ¾:<br>
+##1.æ¸¸æˆæ”¯ä»˜æµç¨‹
+é±¼ä¸¸äº’åŠ¨æ”¯ä»˜æµç¨‹å›¾å¦‚ä¸‹æ‰€ç¤º:<br>
 
 ![image](images/image.jpg)<br>
 
-ËùÐè²ÎÊýÈçÏÂ:
+##2.æ¸¸æˆæ”¯ä»˜ç»“æžœé€šçŸ¥
 
-|²ÎÊý|º¬Òå|
+é±¼ä¸¸äº’åŠ¨æ”¯ä»˜SDKæä¾›ç”µè¯å¡æ”¯ä»˜ï¼Œæ”¯ä»˜å®æ”¯ä»˜å’Œé“¶è”ç­‰å¤šç§æ”¯ä»˜æ–¹å¼.
+æ”¯ä»˜ç»“æžœé€šçŸ¥æ–¹å¼:
+
+â‘ æ”¯ä»˜æˆåŠŸ: 
+å½“æ¸¸æˆä½¿ç”¨ä¸Šè¿°ä¸¤ç§æ–¹å¼æ”¯ä»˜æˆåŠŸä¹‹åŽ,é±¼ä¸¸äº’åŠ¨æœåŠ¡å™¨ä¼šå‘é€ä¸€æ¬¡é€šçŸ¥åˆ°æ¸¸æˆæœåŠ¡å™¨(NoticeUrl),é€šçŸ¥æ¸¸æˆæ”¯ä»˜æˆåŠŸ.æ¸¸æˆæœåŠ¡å™¨æ”¶åˆ°é±¼ä¸¸äº’åŠ¨å‘é€çš„æ”¯ä»˜æˆåŠŸé€šçŸ¥è¯·æ±‚ä¹‹åŽ,éœ€è¦ç«‹å³è¾“å‡ºä¸€ä¸ªâ€œsuccessâ€å­—ç¬¦ä¸²,é±¼ä¸¸äº’åŠ¨æœåŠ¡å™¨æŽ¥æ”¶åˆ°â€œsuccessâ€å­—ç¬¦ä¸²é»˜è®¤é€šçŸ¥æ¸¸æˆæœåŠ¡å™¨æˆåŠŸã€‚ï¼ˆå¦‚æžœæ²¡æœ‰åœ¨è®¢å•å‘èµ·é€šçŸ¥ä¸­ä¼ é€’NoticeUrlï¼Œé±¼ä¸¸äº’åŠ¨æœåŠ¡å™¨å°†ä¼šé€šçŸ¥æ¸¸æˆæœåŠ¡å™¨æä¾›çš„é»˜è®¤åœ°å€ï¼‰
+æ”¶åˆ°æ¸¸æˆæœåŠ¡å™¨è¿”å›žçš„â€œsuccessâ€ä¹‹åŽ,æ”¯ä»˜è·³è½¬åˆ°æ”¯ä»˜æˆåŠŸç•Œé¢,æ˜¾ç¤ºæ”¯ä»˜æˆåŠŸ.åŒæ—¶é¡µé¢ä¸Šè‡ªåŠ¨è°ƒç”¨å®¢æˆ·ç«¯æ”¯ä»˜é€šçŸ¥æŽ¥å£é€šçŸ¥å®¢æˆ·ç«¯æ”¯ä»˜æˆåŠŸ.<br>
+æ”¯ä»˜æˆåŠŸæ—¶,é±¼ä¸¸äº’åŠ¨æœåŠ¡å™¨é€šçŸ¥æ¸¸æˆæœåŠ¡å™¨çš„ç›¸å…³é“¾æŽ¥å’Œå‚æ•°å¦‚ä¸‹:
+
+|å‚æ•°|å«ä¹‰|
 |:---|:---|
-|MerId|ÉÌ»§ID|
-|NoticeUrl|	ÓÎÏ··þÎñÆ÷Í¨ÖªµØÖ·|
-|OrderId|	¶©µ¥ID|
-|ProdName|	ÉÌÆ·Ãû³Æ|
-|EncString|	¼ÓÃÜ×Ö·û´®ÆäÖÐEncStringÊÇÉÌ»§ID,NoticeUrl,OrderId,ÉÌ»§ÃÜÔ¿ ËÄ¸ö×Ö·û´®Á¬½ÓÖ®ºóÓÃMD5¼ÓÃÜÉú³ÉµÄ×Ö·û´®.EncString= MD5(MerId. NoticeUrl. OrderId.MerchantKey);|
-|AccountNo|	Ö§¸¶ÕËºÅ(ÓÃ»§Ö§¸¶µÄÊ±ºòÐèÒªÏÈµÇÂ¼.Õâ¸öÊÇÓÃ»§µÇÂ¼Ö®ºóµÄÖ§¸¶ÕËºÅ.)|
-|Note|Ö§¸¶ÃèÊö(Ô­Ñù·µ»Ø¸øÓÎÏ··þÎñÆ÷µÄÊý¾Ý,¿ª·¢Õß¿ÉÒÔÀûÓÃ¸Ã×Ö¶Î¼ÇÂ¼ÐÅÏ¢)|
-##2.ÓÎÏ·Ö§¸¶½á¹ûÍ¨Öª
-
-ÓãÍè»¥¶¯Ö§¸¶SDKÌá¹©µç»°¿¨Ö§¸¶£¬Ö§¸¶±¦Ö§¸¶ºÍÒøÁªµÈ¶àÖÖÖ§¸¶·½Ê½.
-Ö§¸¶½á¹ûÍ¨Öª·½Ê½:
-
-¢ÙÖ§¸¶³É¹¦: 
-µ±ÓÎÏ·Ê¹ÓÃÉÏÊöÁ½ÖÖ·½Ê½Ö§¸¶³É¹¦Ö®ºó,ÓãÍè»¥¶¯·þÎñÆ÷»á·¢ËÍÒ»´ÎÍ¨Öªµ½ÓÎÏ··þÎñÆ÷(NoticeUrl),Í¨ÖªÓÎÏ·Ö§¸¶³É¹¦.ÓÎÏ··þÎñÆ÷ÊÕµ½ÓãÍè»¥¶¯·¢ËÍµÄÖ§¸¶³É¹¦Í¨ÖªÇëÇóÖ®ºó,ÐèÒªÁ¢¼´Êä³öÒ»¸ö¡°success¡±×Ö·û´®,ÓãÍè»¥¶¯·þÎñÆ÷½ÓÊÕµ½¡°success¡±×Ö·û´®Ä¬ÈÏÍ¨ÖªÓÎÏ··þÎñÆ÷³É¹¦¡££¨Èç¹ûÃ»ÓÐÔÚ¶©µ¥·¢ÆðÍ¨ÖªÖÐ´«µÝNoticeUrl£¬ÓãÍè»¥¶¯·þÎñÆ÷½«»áÍ¨ÖªÓÎÏ··þÎñÆ÷Ìá¹©µÄÄ¬ÈÏµØÖ·£©
-ÊÕµ½ÓÎÏ··þÎñÆ÷·µ»ØµÄ¡°success¡±Ö®ºó,Ö§¸¶Ìø×ªµ½Ö§¸¶³É¹¦½çÃæ,ÏÔÊ¾Ö§¸¶³É¹¦.Í¬Ê±Ò³ÃæÉÏ×Ô¶¯µ÷ÓÃ¿Í»§¶ËÖ§¸¶Í¨Öª½Ó¿ÚÍ¨Öª¿Í»§¶ËÖ§¸¶³É¹¦.<br>
-Ö§¸¶³É¹¦Ê±,ÓãÍè»¥¶¯·þÎñÆ÷Í¨ÖªÓÎÏ··þÎñÆ÷µÄÏà¹ØÁ´½ÓºÍ²ÎÊýÈçÏÂ:
-
-|²ÎÊý|º¬Òå|
-|:---|:---|
-|MerId|	ÉÌ»§ID|
-|OrderId|	¶©µ¥ID|
-|Money	|¶©µ¥½ð¶î£¬µ¥Î»£ºÔª|
-|TranCode|	½»Ò×Âë|
-|EncString|	Í¨Öª¼ÓÃÜ×Ö·û´®ÆäÖÐEncStringÊÇ ÉÌ»§ID,¶©µ¥ID,¶©µ¥½ð¶î,ÉÌ»§ÃÜÔ¿ËÄ¸ö×Ö·û´®Á¬½ÓÖ®ºóÓÃMD5¼ÓÃÜÉú³ÉµÄ×Ö·û.EncString= MD5(MerId.OrderId.Money.MerchantKey);|
-|PaymentFee	|Ö§¸¶½ð¶î£¬µ¥Î»£ºÔª|
-|PaymentStatusCode|	Ö§¸¶×´Ì¬Âë (0ÎªÖ§¸¶³É¹¦,Ö»ÓÐÖ§¸¶³É¹¦²Å»áÍ¨ÖªÓÎÏ··þÎñÆ÷)
-|Note|	¼´Ö§¸¶×¢ÊÍ£¨¿Í»§¶ËAPI²ÎÊýÖÐÍ¨¹ýsetNoteÉèÖÃ£© ¹ºÂòÊ±¿Í»§¶ËÓ¦ÓÃÍ¨¹ýAPI´«Èë£¬Ô­Ñù·µ»Ø¸øÓ¦ÓÃ·þÎñÆ÷£¬¿ª·¢Õß¿ÉÒÔÀûÓÃ¸Ã×Ö¶Î£¬¶¨Òå×Ô¼ºµÄÀ©Õ¹Êý¾Ý¡£ÀýÈçÇø·ÖÓÎÏ··þÎñÆ÷|
-ÓãÍè»¥¶¯·þÎñÆ÷·¢ËÍµÄÇëÇóÁ´½ÓÈçÏÂÊ¾Àý:
+|MerId|	å•†æˆ·ID|
+|OrderId|	è®¢å•ID|
+|Money	|è®¢å•é‡‘é¢ï¼Œå•ä½ï¼šå…ƒ|
+|TranCode|	äº¤æ˜“ç |
+|EncString|	é€šçŸ¥åŠ å¯†å­—ç¬¦ä¸²å…¶ä¸­EncStringæ˜¯ å•†æˆ·ID,è®¢å•ID,è®¢å•é‡‘é¢,å•†æˆ·å¯†é’¥å››ä¸ªå­—ç¬¦ä¸²è¿žæŽ¥ä¹‹åŽç”¨MD5åŠ å¯†ç”Ÿæˆçš„å­—ç¬¦.EncString= MD5(MerId.OrderId.Money.AppSecret);|
+|PaymentFee	|æ”¯ä»˜é‡‘é¢ï¼Œå•ä½ï¼šå…ƒ|
+|PaymentStatusCode|	æ”¯ä»˜çŠ¶æ€ç  (0ä¸ºæ”¯ä»˜æˆåŠŸ,åªæœ‰æ”¯ä»˜æˆåŠŸæ‰ä¼šé€šçŸ¥æ¸¸æˆæœåŠ¡å™¨)
+|Note|	å³æ”¯ä»˜æ³¨é‡Šï¼ˆå®¢æˆ·ç«¯APIå‚æ•°ä¸­é€šè¿‡setNoteè®¾ç½®ï¼‰ è´­ä¹°æ—¶å®¢æˆ·ç«¯åº”ç”¨é€šè¿‡APIä¼ å…¥ï¼ŒåŽŸæ ·è¿”å›žç»™åº”ç”¨æœåŠ¡å™¨ï¼Œå¼€å‘è€…å¯ä»¥åˆ©ç”¨è¯¥å­—æ®µï¼Œå®šä¹‰è‡ªå·±çš„æ‰©å±•æ•°æ®ã€‚ä¾‹å¦‚åŒºåˆ†æ¸¸æˆæœåŠ¡å™¨|
+é±¼ä¸¸äº’åŠ¨æœåŠ¡å™¨å‘é€çš„è¯·æ±‚é“¾æŽ¥å¦‚ä¸‹ç¤ºä¾‹:
 http:// NoticeUrl? MerId=xx&OrderId=xx&Money=xx&TranCode=xx
 &EncString=xx&PaymentFee= xx&PaymentStatusCode=xx&Note=xx
-ÆäÖÐNoticeUrlÎªÓÎÏ··þÎñÆ÷µØÖ·¡£µØÖ·¿ÉÒÔÔÚ¶©µ¥²ÎÊýÖÐÉèÖÃ£¬Èç¹û¶©µ¥ÐÅÏ¢ÖÐÎ´Ìá¹©¸Ã²ÎÊý£¬ÔòÍ¨Öª³§ÉÌÌá¹©µÄÄ¬ÈÏÓÎÏ··þÎñÆ÷µØÖ·¡£
+å…¶ä¸­NoticeUrlä¸ºæ¸¸æˆæœåŠ¡å™¨åœ°å€ã€‚åœ°å€å¯ä»¥åœ¨è®¢å•å‚æ•°ä¸­è®¾ç½®ï¼Œå¦‚æžœè®¢å•ä¿¡æ¯ä¸­æœªæä¾›è¯¥å‚æ•°ï¼Œåˆ™é€šçŸ¥åŽ‚å•†æä¾›çš„é»˜è®¤æ¸¸æˆæœåŠ¡å™¨åœ°å€ã€‚
 
-¢ÚÖ§¸¶Ê§°Ü:
-Ö§¸¶Ê§°ÜÊ±,ÓãÍè»¥¶¯·þÎñÆ÷²»»áÍ¨ÖªÓÎÏ··þÎñÆ÷Ö§¸¶Ê§°ÜÏà¹ØÐÅÏ¢.
-Ö§¸¶Ê§°Ü,Ö±½ÓÔÚÊ§°ÜÒ³Ãæ×Ô¶¯µ÷ÓÃ¿Í»§¶ËÖ§¸¶Í¨Öª½Ó¿ÚÍ¨ÖªÓÎÏ·Ö§¸¶Ê§°Ü.
-##3.¼ì²éÓÃ»§µÇÂ¼SessionKeyÊÇ·ñÓÐÐ§
-ÓãÍè»¥¶¯Ö§¸¶Ò²Ìá¹©ÓÃ»§µÇÂ¼ÑéÖ¤£º
+â‘¡æ”¯ä»˜å¤±è´¥:
+æ”¯ä»˜å¤±è´¥æ—¶,é±¼ä¸¸äº’åŠ¨æœåŠ¡å™¨ä¸ä¼šé€šçŸ¥æ¸¸æˆæœåŠ¡å™¨æ”¯ä»˜å¤±è´¥ç›¸å…³ä¿¡æ¯.
+æ”¯ä»˜å¤±è´¥,ç›´æŽ¥åœ¨å¤±è´¥é¡µé¢è‡ªåŠ¨è°ƒç”¨å®¢æˆ·ç«¯æ”¯ä»˜é€šçŸ¥æŽ¥å£é€šçŸ¥æ¸¸æˆæ”¯ä»˜å¤±è´¥.
+##3.æ£€æŸ¥ç”¨æˆ·ç™»å½•SessionKeyæ˜¯å¦æœ‰æ•ˆ
+é±¼ä¸¸äº’åŠ¨æ”¯ä»˜ä¹Ÿæä¾›ç”¨æˆ·ç™»å½•éªŒè¯ï¼š
 
-|²ÎÊý|º¬Òå|
+|å‚æ•°|å«ä¹‰|
 |:---|:---|
-|MerId|	ÉÌ»§ID|
-|Act|	4(ÇëÇó±àºÅ)|
-|Uin|	ÓÃ»§µÄÓãÍè»¥¶¯ÕÊºÅ|
-|SessionKey	|ÓÃ»§µÄµÇÂ¼SessionKey|
-|EncString	|Í¨Öª¼ÓÃÜ×Ö·û´®ÆäÖÐEncStringÊÇ ÉÌ»§ID,ÇëÇó±àºÅ,ÓãÍè»¥¶¯ÕÊºÅ,SessionKey,ÉÌ»§ÃÜÔ¿Îå¸ö×Ö·û´®Á¬½ÓÖ®ºóÓÃMD5¼ÓÃÜÉú³ÉµÄ×Ö·û´®.EncString= MD5(MerId.Act.Uin.SessionKey.MerchantKey);|
-ÇëÇóµØÖ·Îª£ºhttp://sdk.yuwan8.com/index.php/user_center
+|MerId|	å•†æˆ·ID|
+|Act|	4(è¯·æ±‚ç¼–å·)|
+|Uin|	ç”¨æˆ·çš„é±¼ä¸¸äº’åŠ¨å¸å·|
+|SessionKey	|ç”¨æˆ·çš„ç™»å½•SessionKey|
+|EncString	|é€šçŸ¥åŠ å¯†å­—ç¬¦ä¸²å…¶ä¸­EncStringæ˜¯ å•†æˆ·ID,è¯·æ±‚ç¼–å·,é±¼ä¸¸äº’åŠ¨å¸å·,SessionKey,å•†æˆ·å¯†é’¥äº”ä¸ªå­—ç¬¦ä¸²è¿žæŽ¥ä¹‹åŽç”¨MD5åŠ å¯†ç”Ÿæˆçš„å­—ç¬¦ä¸².EncString= MD5(MerId.Act.Uin.SessionKey.AppSecret);|
+è¯·æ±‚åœ°å€ä¸ºï¼šhttp://sdk.yuwan8.com/index.php/user_center
 
-ÓÎÏ··þÎñÆ÷·¢³öÇëÇóºó£¬ÓãÍè»¥¶¯·þÎñÆ÷»áÑéÖ¤EncStringÊÇ·ñÓÐÐ§,ÑéÖ¤SessionKeyÊÇ·ñÓÐÐ§,È»ºó·µ»Ø½á¹û¸øÓÎÏ··þÎñÆ÷¡£
-ÓãÍè»¥¶¯·þÎñÆ÷·µ»ØµÄ²ÎÊýÈçÏÂ£º
-{"ErrorCode":2,"ErrorDesc":"MerIdÎÞÐ§"}
+æ¸¸æˆæœåŠ¡å™¨å‘å‡ºè¯·æ±‚åŽï¼Œé±¼ä¸¸äº’åŠ¨æœåŠ¡å™¨ä¼šéªŒè¯EncStringæ˜¯å¦æœ‰æ•ˆ,éªŒè¯SessionKeyæ˜¯å¦æœ‰æ•ˆ,ç„¶åŽè¿”å›žç»“æžœç»™æ¸¸æˆæœåŠ¡å™¨ã€‚
+é±¼ä¸¸äº’åŠ¨æœåŠ¡å™¨è¿”å›žçš„å‚æ•°å¦‚ä¸‹ï¼š
+{"ErrorCode":2,"ErrorDesc":"MerIdæ— æ•ˆ"}
 
-|²ÎÊý|º¬Òå|
+|å‚æ•°|å«ä¹‰|
 |:---|:---|
-|ErrorCode|	´íÎóÂë(0=Ê§°Ü,1=³É¹¦,2=MerIdÎÞÐ§,5=EncStringÎÞÐ§,11=SessionKeyÎÞÐ§)|
-|ErrorDesc|	´íÎóÃèÊö|
+|ErrorCode|	é”™è¯¯ç (0=å¤±è´¥,1=æˆåŠŸ,2=MerIdæ— æ•ˆ,5=EncStringæ— æ•ˆ,11=SessionKeyæ— æ•ˆ)|
+|ErrorDesc|	é”™è¯¯æè¿°|
