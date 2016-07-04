@@ -223,7 +223,7 @@ void RgCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
 
 >* onLogoutListener：注销完成后会回调该对象的onLogout()方法。  
 
->* **注销账号和修改密码成功后都会调用注销接口。**
+>* **注销账号会调用注销接口。**
 
 **使用示例：**
 ```java
