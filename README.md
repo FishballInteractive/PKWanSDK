@@ -318,13 +318,7 @@ boolean RgCommplatform.isLogined(Context context);
 ```java
 String RgCommplatform.getToken(Context context);
 ```
-
-##9.获取当前用户的uid
-```java
-String RgCommplatform.getUid(Context context);
-```
-
-##10.上报角色、区服信息
+##9.上报角色、区服信息
 在玩家创建角色完成后调用
 ```java
  void RgCommplatform.reportRoleInfo(RgRoleInfo roleInfo)
