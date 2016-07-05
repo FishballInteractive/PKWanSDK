@@ -156,7 +156,7 @@ void RgCommplatform.rgInit(Context context, RgAppInfo appInfo, OnInitCompleteLis
 ```java
 //参数分别为AppId  AppKey  论坛ID，由PK玩运营人员分配
 PkAppInfo appInfo = new PkAppInfo("10000002", "aeb92e964c1cf89a9ddc717b9a2b9fcc");
-PkCommplatform.rgInit(this, appInfo, new OnInitCompleteListener() {
+PkCommplatform.init(this, appInfo, new OnInitCompleteListener() {
 	@Override
 	public void onInitComplete(int initCode) {
 		if (initCode == RgConstant.INIT_SUCCESS) {
@@ -167,7 +167,7 @@ PkCommplatform.rgInit(this, appInfo, new OnInitCompleteListener() {
 ```
 ##2.销毁SDK
 ```java
-void RgCommplatform.destory();
+void PkCommplatform.destory();
 ```
 >* 用来释放SDK资源，在应用的主Activity的onDestory()方法中调用。
 **使用示例：**
@@ -328,7 +328,7 @@ String PkCommplatform.getToken(Context context);
 ##9.上报角色、区服信息
 在玩家创建角色完成后调用
 ```java
- void PkCommplatform.submitPlayerInfo(RgRoleInfo roleInfo)
+ void PkCommplatform.submitPlayerInfo(PkRoleInfo roleInfo)
 ```
 >* roleInfo：角色、区服信息  
 
