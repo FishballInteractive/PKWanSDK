@@ -2,7 +2,7 @@
 ------
 PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成。
 #二.SDK接入流程简要描述
-1.获取(商户Id)AppId 和AppKey、(支付密钥) AppSecret以及(论坛ID)FormId
+1.获取(商户Id)AppId 和AppKey、(密钥) AppSecret
 
 2.搭建 SDK 的环境，导入 SDK 的必要文件，参见 SDK开发环境搭建。  
 
@@ -82,6 +82,10 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 	android:screenOrientation="landscape"
 	android:theme="@android:style/Theme.Light.NoTitleBar">
 </activity>
+<activity
+        android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
+        android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+        android:theme="@android:style/Theme.Translucent" />
 
 <!-- YuWanPaySDK横屏组件声明end-->
 ```
@@ -127,7 +131,10 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 	android:screenOrientation="portrait"
 	android:theme="@android:style/Theme.Light.NoTitleBar">
 </activity>
-
+<activity
+        android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
+        android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+        android:theme="@android:style/Theme.Translucent" />
 <!-- YuWanPaySDK竖屏组件声明end-->
 ```
 #四.接入API
@@ -148,8 +155,8 @@ void RgCommplatform.rgInit(Context context, RgAppInfo appInfo, OnInitCompleteLis
 **使用示例：**
 ```java
 //参数分别为AppId  AppKey  论坛ID，由PK玩运营人员分配
-RgAppInfo appInfo = new RgAppInfo("10000002", "aeb92e964c1cf89a9ddc717b9a2b9fcc", "116");
-RgCommplatform.rgInit(this, appInfo, new OnInitCompleteListener() {
+PkAppInfo appInfo = new PkAppInfo("10000002", "aeb92e964c1cf89a9ddc717b9a2b9fcc");
+PkCommplatform.rgInit(this, appInfo, new OnInitCompleteListener() {
 	@Override
 	public void onInitComplete(int initCode) {
 		if (initCode == RgConstant.INIT_SUCCESS) {
@@ -160,14 +167,14 @@ RgCommplatform.rgInit(this, appInfo, new OnInitCompleteListener() {
 ```
 ##2.销毁SDK
 ```java
-void RgCommplatform.rgDestory();
+void RgCommplatform.destory();
 ```
 >* 用来释放SDK资源，在应用的主Activity的onDestory()方法中调用。
 **使用示例：**
 ```java
 @Override
 protected void onDestroy() {
-	RgCommplatform.rgDestory();
+	PkCommplatform.destory();
 	super.onDestroy();
 }
 ```
@@ -175,7 +182,7 @@ protected void onDestroy() {
 ##3.登录
 
 ```java
-void RgCommplatform.rgLogin(OnLoginProcessListener loginProcessListener)
+void PkCommplatform.login(OnLoginProcessListener loginProcessListener)
 ```
 >* 在RgCommplatform.rgInit()方法成功回调时调用以及在游戏的开始游戏或登陆按钮按下时调用。  
 
@@ -196,11 +203,11 @@ private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 		}
 	};
 //在rginit()方法的成功回调接口内调用
-RgCommplatform.rgInit(this, appInfo, new OnInitCompleteListener() {
+PkCommplatform.init(this, appInfo, new OnInitCompleteListener() {
 	@Override
 	public void onInitComplete(int initCode) {
 		if (initCode == RgConstant.INIT_SUCCESS) {
-RgCommplatform.rgLogin(mLoginCallback);
+PkCommplatform.login(mLoginCallback);
 			//TODO Your Code
 		}
 	}
@@ -210,14 +217,14 @@ Button btn_login = (Button) findViewById(R.id.btn_login);
 btn_login.setOnClickListener(new OnClickListener() {
 	@Override
 	public void onClick(View v) {
-		RgCommplatform.rgLogin(mLoginCallback);
+		PkCommplatform.login(mLoginCallback);
 	}
 });
 ```
 
 ##4.注销
 ```java
-void RgCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
+void PkCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
 ```
 >* 必须在RgCommplatform.rgInit()方法成功回调时调用addOnLogoutListener添加注销监听接口。如果游戏需要，也可以在其他地方添加额外的注销监听接口。 
 
@@ -227,7 +234,7 @@ void RgCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
 
 **使用示例：**
 ```java
-RgCommplatform.addOnLogoutListener(new OnLogoutListener() {
+PkCommplatform.addOnLogoutListener(new OnLogoutListener() {
 	@Override
 	public void onLogout() {
 // 注销帐号处理逻辑，以下代码仅为示例代码，cp可根据自身需要进行操作，如重新弹出登录界面等
@@ -240,7 +247,7 @@ RgCommplatform.addOnLogoutListener(new OnLogoutListener() {
 
 ##5.显示悬浮窗
 ```java
-void RgCommplatform.showFloatWindow(Activity activity)
+void PkCommplatform.showFloatWindow(Activity activity)
 ```
 >* 必须在登陆成功时调用该方法显示悬浮窗。  
 
@@ -251,8 +258,8 @@ void RgCommplatform.showFloatWindow(Activity activity)
 private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 		@Override
 		public void finishLoginProcess(int loginStatus) {
-			if (RgConstant.LOGIN_SUCCESS == loginStatus) {// 登陆成功
-				RgCommplatform.showFloatWindow(GameMainActivity.this);
+			if (PkConstant.LOGIN_SUCCESS == loginStatus) {// 登陆成功
+				PkCommplatform.showFloatWindow(GameMainActivity.this);
 			}
 		}
 	};
@@ -260,7 +267,7 @@ private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 ##6.支付
 ###a.支付接口说明
 ```java
-void RgCommplatform.rgPayAsyn(RgBuyInfo buyInfo, OnPayProcessListener payListener);
+void PkCommplatform.pay(RgBuyInfo buyInfo, OnPayProcessListener payListener);
 ```
 >* buiInfo：支付的相关参数设置  
 
@@ -274,21 +281,21 @@ String uuid = UUID.randomUUID().toString(); // 订单id，必须唯一，必须�
 String itemName = "昆仑天晶";// 道具名称 必须设置
 int gredit = 100;// 支付金额 必须设置，单位：元
 String note = "原样返回给游戏服务器";// 直接回传给游戏服务器的字符串，可不设置
-RgBuyInfo buyInfo = new RgBuyInfo(uuid, itemName, gredit);
+PkBuyInfo buyInfo = new PkBuyInfo(uuid, itemName, gredit);
 buyInfo.setNote(note);
-RgCommplatform.rgPayAsyn(buyInfo, new OnPayProcessListener() {
+PkCommplatform.pay(buyInfo, new OnPayProcessListener() {
 
 @Override
 public void finishPayProcess(int payCode) {
 Log.d("paycode", "返回支付结果--payCode=" + payCode);
 switch (payCode) {
-case RgConstant.PAY_SUCCESS:// 支付成功
+case PkConstant.PAY_SUCCESS:// 支付成功
 		Toast.makeText(GameMainActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
 			break;
-case RgConstant.PAY_FAIL:// 支付失败
+case PkConstant.PAY_FAIL:// 支付失败
 			Toast.makeText(GameMainActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
 			break;
-case RgConstant.PAY_CANCEL:// 支付取消
+case PkConstant.PAY_CANCEL:// 支付取消
 			Toast.makeText(GameMainActivity.this, "支付取消", Toast.LENGTH_SHORT).show();
 			break;
 		default:
@@ -312,16 +319,16 @@ case RgConstant.PAY_CANCEL:// 支付取消
 
 ##7.判断是否已登陆
 ```java
-boolean RgCommplatform.isLogined(Context context);
+boolean PkCommplatform.isLogined(Context context);
 ```
 ##8.获取当前登陆验证的token
 ```java
-String RgCommplatform.getToken(Context context);
+String PkCommplatform.getToken(Context context);
 ```
 ##9.上报角色、区服信息
 在玩家创建角色完成后调用
 ```java
- void RgCommplatform.reportRoleInfo(RgRoleInfo roleInfo)
+ void PkCommplatform.submitPlayerInfo(RgRoleInfo roleInfo)
 ```
 >* roleInfo：角色、区服信息  
 
@@ -333,7 +340,7 @@ RgRoleInfo roleInfo = new RgRoleInfo(roleName,serverName);
 ```
 
 
-**注意：rginit、rgLogin、rgPayAsyn、rgDestory、showFloatWindow这几个方法请务必在主线程调用。**
+**注意：init、login、pay、destory、showFloatWindow这几个方法请务必在主线程调用。**
 #五.混淆
 鱼丸互动SDK 包是以 jar包及资源文件提供给用户的，其中jar包已经半混淆状态，您在混淆自 己 APK 包的时候请不要将鱼丸互动SDK的jar包一起混淆，因为里面有些自定义 UI 控件，若被混淆后会因为无法找到相关类而抛异常。
 您可以在用 ant 构建混淆包的 build.xml 里面对应位置或者在 proguard.cfg 里加入：
