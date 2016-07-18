@@ -17,14 +17,14 @@ PK玩SDK支付提供电话卡支付，支付宝支付和银联等多种支付方
 
 |参数|含义|
 |:---|:---|
-|MerId|	商户ID|
-|OrderId|	订单ID|
-|Money	|订单金额，单位：元|
-|TranCode|	交易码|
-|EncString|	通知加密字符串其中EncString是 商户ID,订单ID,订单金额,商户密钥四个字符串连接之后用MD5加密生成的字符.EncString= MD5(MerId.OrderId.Money.AppSecret)(注：字符传拼接为PHP方式的写法，下同);|
-|PaymentFee	|支付金额，单位：元|
-|PaymentStatusCode|	支付状态码 (0为支付成功,只有支付成功才会通知游戏服务器)
-|Note|	即支付注释（客户端API参数中通过setNote设置） 购买时客户端应用通过API传入，原样返回给应用服务器，开发者可以利用该字段，定义自己的扩展数据。例如区分游戏服务器|
+|game_id|	商户ID|
+|order_id|订单ID|
+|total_fee|订单金额，单位：元|
+|tran_code|交易码|
+|enc_string|	通知加密字符串其中enc_string是 商户ID,订单ID,订单金额,商户密钥四个字符串连接之后用MD5加密生成的字符.EncString= MD5(game_id.order_id.total_fee.AppSecret)(注：字符传拼接为PHP方式的写法，下同);|
+|user_id|用户uid|
+|pay_status|	支付状态码 (0为支付成功,只有支付成功才会通知游戏服务器)
+|note|	即支付注释（客户端API参数中通过setNote设置） 购买时客户端应用通过API传入，原样返回给应用服务器，开发者可以利用该字段，定义自己的扩展数据。例如区分游戏服务器|
 PK玩SDK服务器发送的请求链接如下示例:
 http:// NoticeUrl? MerId=xx&OrderId=xx&Money=xx&TranCode=xx
 &EncString=xx&PaymentFee= xx&PaymentStatusCode=xx&Note=xx
