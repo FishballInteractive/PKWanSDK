@@ -26,8 +26,8 @@ PK玩SDK支付提供电话卡支付，支付宝支付和银联等多种支付方
 |pay_status|	支付状态码 (0为支付成功,只有支付成功才会通知游戏服务器)
 |note|	即支付注释（客户端API参数中通过setNote设置） 购买时客户端应用通过API传入，原样返回给应用服务器，开发者可以利用该字段，定义自己的扩展数据。例如区分游戏服务器|
 PK玩SDK服务器发送的请求链接如下示例:
-http:// NoticeUrl? MerId=xx&OrderId=xx&Money=xx&TranCode=xx
-&EncString=xx&PaymentFee= xx&PaymentStatusCode=xx&Note=xx
+http:// NoticeUrl? game_id=xx&order_id=xx&total_fee=xx&tran_code=xx
+&enc_string=xx&user_id=xx&pay_status=xx&note=xx
 其中NoticeUrl为游戏服务器地址。地址可以在订单参数中设置，如果订单信息中未提供该参数，则通知厂商提供的默认游戏服务器地址。
 
 ②支付失败:
