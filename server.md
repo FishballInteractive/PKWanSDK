@@ -38,9 +38,9 @@ PK玩SDK支付也提供用户登录验证：
 
 |参数|含义|
 |:---|:---|
-|MerId  |商户ID|
-|Token	|用户的登录Token|
-|EncString	|通知加密字符串其中EncString是 商户ID,Token,商户密钥三个字符串连接之后用MD5加密生成的字符串.EncString= MD5(MerId.Token.AppSecret);|
+|game_id  |商户ID|
+|token	|用户的登录Token|
+|EncString	|通知加密字符串其中EncString是 商户ID,Token,商户密钥三个字符串连接之后用MD5加密生成的字符串.EncString= MD5(game_id.token.AppSecret);|
 请求地址为：http://sdk.yuwan8.com/index.php/user_center
 
 游戏服务器发出请求后，PK玩SDK服务器会验证EncString是否有效,验证Token是否有效,然后返回结果给游戏服务器。
