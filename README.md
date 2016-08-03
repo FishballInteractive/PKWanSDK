@@ -128,7 +128,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 #四.接入API
 ##1.初始化SDK
 ```java
-void RgCommplatform.rgInit(Context context, RgAppInfo appInfo, OnInitCompleteListener 	onInitCompleteListener);
+void PkCommplatform.init(Context context, PkAppInfo appInfo, OnInitCompleteListener 	onInitCompleteListener);
 ```
 >* 用于初始化PK玩SDK，在应用的主Activity中必须调用一次该方法。  
 
@@ -138,7 +138,7 @@ void RgCommplatform.rgInit(Context context, RgAppInfo appInfo, OnInitCompleteLis
 
 >* onInitCompleteListener：初始化完成后的通知回调。  
 
->* 初始化状态回调(initCode)：成功返回RgConstant.INIT_SUCCESS，失败返回RgConstant.INIT_FAILED。
+>* 初始化状态回调(initCode)：成功返回PkConstant.INIT_SUCCESS，失败返回PkConstant.INIT_FAILED。
 
 **使用示例：**
 ```java
@@ -147,7 +147,7 @@ PkAppInfo appInfo = new PkAppInfo("10000002", "aeb92e964c1cf89a9ddc717b9a2b9fcc"
 PkCommplatform.init(this, appInfo, new OnInitCompleteListener() {
 	@Override
 	public void onInitComplete(int initCode) {
-		if (initCode == RgConstant.INIT_SUCCESS) {
+		if (initCode == PkConstant.INIT_SUCCESS) {
 			//TODO Your Code
 		}
 	}
@@ -172,20 +172,20 @@ protected void onDestroy() {
 ```java
 void PkCommplatform.login(OnLoginProcessListener loginProcessListener)
 ```
->* 在RgCommplatform.rgInit()方法成功回调时调用以及在游戏的开始游戏或登陆按钮按下时调用。  
+>* PkCommplatform.init()方法成功回调时调用以及在游戏的开始游戏或登陆按钮按下时调用。  
 
 >* loginProcessListener：登陆完成后的回调接口。  
 
 >* 如果是第一次登陆游戏，弹出登陆窗口。如果在上一次成功登陆游戏，这次会自动登陆，并弹出自动登陆提示页面。  
 
->* 登陆状态回调(loginCode)：成功返回RgConstant.LOGIN_SUCCESS，失败返回RgConstant.LOGIN_FAILED，用户取消登陆框时返回RgConstant.LOGIN_CANCELED。
+>* 登陆状态回调(loginCode)：成功返回PkConstant.LOGIN_SUCCESS，失败返回PkConstant.LOGIN_FAILED，用户取消登陆框时返回PkConstant.LOGIN_CANCELED。
 
 **使用示例：**
 ```java
 private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 		@Override
 		public void finishLoginProcess(int loginStatus) {
-			if (RgConstant.LOGIN_SUCCESS == loginStatus) {// 登陆成功
+			if (PkConstant.LOGIN_SUCCESS == loginStatus) {// 登陆成功
 				//TODO Your Code
 			}
 		}
@@ -194,7 +194,7 @@ private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 PkCommplatform.init(this, appInfo, new OnInitCompleteListener() {
 	@Override
 	public void onInitComplete(int initCode) {
-		if (initCode == RgConstant.INIT_SUCCESS) {
+		if (initCode == PkConstant.INIT_SUCCESS) {
 PkCommplatform.login(mLoginCallback);
 			//TODO Your Code
 		}
@@ -214,7 +214,7 @@ btn_login.setOnClickListener(new OnClickListener() {
 ```java
 void PkCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
 ```
->* 必须在RgCommplatform.rgInit()方法成功回调时调用addOnLogoutListener添加注销监听接口。如果游戏需要，也可以在其他地方添加额外的注销监听接口。 
+>* 必须在PkCommplatform.init()方法成功回调时调用addOnLogoutListener添加注销监听接口。如果游戏需要，也可以在其他地方添加额外的注销监听接口。 
 
 >* onLogoutListener：注销完成后会回调该对象的onLogout()方法。  
 
@@ -261,7 +261,7 @@ void PkCommplatform.pay(RgBuyInfo buyInfo, OnPayProcessListener payListener);
 
 >* payListener：支付结果回调接口  
 
->* 支付状态回调(payCode)：支付成功返回RgConstant.PAY_SUCCESS,支付失败返回RgConstant.PAY_FAIL，支付取消返回RgConstant.PAY_CANCEL。
+>* 支付状态回调(payCode)：支付成功返回PkConstant.PAY_SUCCESS,支付失败返回PkConstant.PAY_FAIL，支付取消返回PkConstant.PAY_CANCEL。
 
 **使用示例：**
 ```java
@@ -333,6 +333,6 @@ RgRoleInfo roleInfo = new RgRoleInfo(roleName,serverName);
 鱼丸互动SDK 包是以 jar包及资源文件提供给用户的，其中jar包已经半混淆状态，您在混淆自 己 APK 包的时候请不要将鱼丸互动SDK的jar包一起混淆，因为里面有些自定义 UI 控件，若被混淆后会因为无法找到相关类而抛异常。
 您可以在用 ant 构建混淆包的 build.xml 里面对应位置或者在 proguard.cfg 里加入：
 ```java
--keep public class com.ireadygo.sdk.**
+-keep public class com.pkwan.sdk.**
 ```
 以避免 鱼丸互动SDK 的 jar 包被混淆。
