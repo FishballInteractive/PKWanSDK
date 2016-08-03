@@ -29,6 +29,7 @@ PK玩SDK服务器发送的请求链接如下示例:
 http:// NoticeUrl? game_id=xx&order_id=xx&total_fee=xx&tran_code=xx
 &enc_string=xx&user_id=xx&pay_status=xx&note=xx
 其中NoticeUrl为游戏服务器地址。地址可以在订单参数中设置，如果订单信息中未提供该参数，则通知厂商提供的默认游戏服务器地址。
+
 签名生成规则：
 1. 除enc_string外，所有回调参数均参与签名
 2. 字符串以key=value的形式拼接，多个字符串之间以“&”连接。如：gamg_id=xxx&order_id=xxx
