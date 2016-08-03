@@ -59,7 +59,12 @@ PK玩SDK服务器返回的参数如下：
 |data| 成功登录时返回的数据|
 
 登录成功
-{"code":0,"data":{}}
+{"code":0,"data":{
+  "user-id":"xxx",
+  "avatar":"xxx",
+  "nickname":"xxx",
+  "gender":"xxx",
+}}
 
 登录失败
 {"code":2,"message":"appid无效"}
