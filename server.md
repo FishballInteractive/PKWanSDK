@@ -67,5 +67,5 @@ PK玩SDK服务器返回的参数如下：
 }}
 
 登录失败
-{"code":2,"message":"appid无效"}
+{"code":2,"message":"xxx"}
 
