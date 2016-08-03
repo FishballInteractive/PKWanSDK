@@ -31,10 +31,10 @@ http:// NoticeUrl? game_id=xx&order_id=xx&total_fee=xx&tran_code=xx
 其中NoticeUrl为游戏服务器地址。地址可以在订单参数中设置，如果订单信息中未提供该参数，则通知厂商提供的默认游戏服务器地址。
 
 签名生成规则：
-1. 除enc_string外，所有回调参数均参与签名
-2. 字符串以key=value的形式拼接，多个字符串之间以“&”连接。如：gamg_id=xxx&order_id=xxx
-3. 字符串拼接时以key的字母升序排序
-4. 回调参数拼接完成后，同样以“&”连接加上app_secret=xxx(app_secret为加密参数，由PKWan运营人员提供)，然后MD5生成签名串
+  1. 除enc_string外，所有回调参数均参与签名
+  2. 字符串以key=value的形式拼接，多个字符串之间以“&”连接。如：gamg_id=xxx&order_id=xxx
+  3. 字符串拼接时以key的字母升序排序
+  4. 回调参数拼接完成后，同样以“&”连接加上app_secret=xxx(app_secret为商户密钥，由PKWan运营人员提供)，然后MD5生成签名串
 
 ②支付失败:
 支付失败时,PK玩SDK服务器不会通知游戏服务器支付失败相关信息.
@@ -46,7 +46,7 @@ PK玩SDK支付也提供用户登录验证：
 |:---|:---|
 |appid  |商户ID|
 |token	|用户的登录token|
-|sign	|通知加密字符串其中EncString是 商户ID,Token,商户密钥三个字符串连接之后用MD5加密生成的字符串.sign= MD5("appid=xx&token=xx&appsecret=xx");|
+|sign	|知加密字符串其中sign是 商户ID,token,商户密钥三个字符串连接之后用MD5加密生成的字符串.sign= MD5("appid=xx&token=xx&appsecret=xx");|
 请求地址为：http://sdk.pkwan.cn/api/user/profile
 
 游戏服务器发出请求后，PK玩SDK服务器会验证sign是否有效,验证token是否有效,然后返回结果给游戏服务器。
