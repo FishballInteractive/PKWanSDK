@@ -44,7 +44,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 ```xml
 <!-- YuWanPaySDK横屏组件声明start-->
 <activity
-	android:name="com.ireadygo.sdk.ui.PkAccountActivity"
+	android:name="com.pkwan.sdk.ui.PkAccountActivity"
 	android:configChanges="keyboardHidden|orientation|screenSize"
 	android:label="@string/app_name"
 	android:screenOrientation="landscape"
@@ -52,35 +52,29 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 	android:windowSoftInputMode="adjustPan">
 </activity>
 <activity
-	android:name="com.ireadygo.sdk.ui.PkPayDetailActivity"
+	android:name="com.pkwan.sdk.ui.PkPayDetailActivity"
 	android:configChanges="orientation|keyboardHidden|screenSize"
 	android:screenOrientation="landscape"
 	android:theme="@android:style/Theme.Translucent.NoTitleBar">
 </activity>
 <activity
-	android:name="com.ireadygo.sdk.ui.PkPayActivity"
+	android:name="com.pkwan.sdk.ui.PkPayActivity"
 	android:configChanges="orientation|keyboardHidden|screenSize"
 	android:screenOrientation="landscape"
 	android:theme="@android:style/Theme.Translucent.NoTitleBar">
 </activity>
 <activity
-	android:name="com.ireadygo.sdk.ui.PkFloatWindowActivity"
+	android:name="com.pkwan.sdk.ui.PkFloatWindowActivity"
 	android:configChanges="orientation|keyboardHidden|screenSize"
 	android:screenOrientation="landscape"
 	android:theme="@android:style/Theme.Translucent.NoTitleBar">
 </activity>
 <activity
-	android:name="com.ireadygo.sdk.ui.PkWebViewActivity"
+	android:name="com.pkwan.sdk.ui.PkWebViewActivity"
 	android:configChanges="orientation|keyboardHidden|screenSize"
 	android:screenOrientation="landscape"
 	android:theme="@android:style/Theme.Light.NoTitleBar"
 	android:windowSoftInputMode="adjustResize">
-</activity>
-<activity
-	android:name="com.ireadygo.sdk.ui.PkModifyPasswordActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="landscape"
-	android:theme="@android:style/Theme.Light.NoTitleBar">
 </activity>
 <activity
         android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
@@ -93,7 +87,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 ```xml
 <!-- YuWanPaySDK竖屏组件声明start-->
 <activity
-	android:name="com.ireadygo.sdk.ui.PkAccountActivity"
+	android:name="com.pkwan.sdk.ui.PkAccountActivity"
 	android:configChanges="keyboardHidden|orientation|screenSize"
 	android:label="@string/app_name"
 	android:screenOrientation="portrait"
@@ -101,35 +95,29 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 	android:windowSoftInputMode="adjustPan">
 </activity>
 <activity
-	android:name="com.ireadygo.sdk.ui.PkPayDetailActivity"
+	android:name="com.pkwan.sdk.ui.PkPayDetailActivity"
 	android:configChanges="orientation|keyboardHidden|screenSize"
 	android:screenOrientation="portrait"
 	android:theme="@android:style/Theme.Translucent.NoTitleBar">
 </activity>
 <activity
-	android:name="com.ireadygo.sdk.ui.PKPayActivity"
+	android:name="com.pkwan.sdk.ui.PKPayActivity"
 	android:configChanges="orientation|keyboardHidden|screenSize"
 	android:screenOrientation="portrait"
 	android:theme="@android:style/Theme.Translucent.NoTitleBar">
 </activity>
 <activity
-	android:name="com.ireadygo.sdk.ui.PKFloatWindowActivity"
+	android:name="com.pkwan.sdk.ui.PKFloatWindowActivity"
 	android:configChanges="orientation|keyboardHidden|screenSize"
 	android:screenOrientation="portrait"
 	android:theme="@android:style/Theme.Translucent.NoTitleBar">
 </activity>
 <activity
-	android:name="com.ireadygo.sdk.ui.PkWebViewActivity"
+	android:name="com.pkwan.sdk.ui.PkWebViewActivity"
 	android:configChanges="orientation|keyboardHidden|screenSize"
 	android:screenOrientation="portrait"
 	android:theme="@android:style/Theme.Light.NoTitleBar"
 	android:windowSoftInputMode="adjustResize">
-</activity>
-<activity
-	android:name="com.ireadygo.sdk.ui.PkModifyPasswordActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="portrait"
-	android:theme="@android:style/Theme.Light.NoTitleBar">
 </activity>
 <activity
         android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
