@@ -194,9 +194,9 @@ private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 PkCommplatform.init(this, appInfo, new OnInitCompleteListener() {
 	@Override
 	public void onInitComplete(int initCode) {
-		if (initCode == PkConstant.INIT_SUCCESS) {
-PkCommplatform.login(mLoginCallback);
-			//TODO Your Code
+	    if (initCode == PkConstant.INIT_SUCCESS) {
+                PkCommplatform.login(mLoginCallback);
+		//TODO Your Code
 		}
 	}
 });
@@ -265,12 +265,14 @@ void PkCommplatform.pay(RgBuyInfo buyInfo, OnPayProcessListener payListener);
 
 **使用示例：**
 ```java
-String uuid = UUID.randomUUID().toString(); // 订单id，必须唯一，必须设置
+String orderId = UUID.randomUUID().toString(); // 订单id，必须唯一，必须设置
 String itemName = "昆仑天晶";// 道具名称 必须设置
 int gredit = 100;// 支付金额 必须设置，单位：元
-String note = "原样返回给游戏服务器";// 直接回传给游戏服务器的字符串，可不设置
-PkBuyInfo buyInfo = new PkBuyInfo(uuid, itemName, gredit);
+String note = "原样返回给游戏服务器";// 透传参数，可不设置
+PkBuyInfo buyInfo = new PkBuyInfo(orderId, itemName, gredit);
 buyInfo.setNote(note);
+buyInfo.setExchangeRate(10);//游戏币与人民币的兑换例，如1元=10金币，则值为1。可不设置
+
 PkCommplatform.pay(buyInfo, new OnPayProcessListener() {
 
 @Override
