@@ -47,7 +47,7 @@ PK玩SDK支付也提供用户登录验证：
 |appid  |商户ID|
 |token	|用户的登录token|
 |sign	|知加密字符串其中sign是 商户ID,token,商户密钥三个字符串连接之后用MD5加密生成的字符串.sign= MD5("appid=xx&token=xx&app_secret=xx");|
-请求地址为：http://sdk.pkwan.cn/api/user/profile
+请求地址为：http://sdk.pkwan.cn/api/user/profile，请求方式：GET
 
 游戏服务器发出请求后，PK玩SDK服务器会验证sign是否有效,验证token是否有效,然后返回结果给游戏服务器。
 PK玩SDK服务器返回的参数如下：
