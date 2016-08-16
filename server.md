@@ -3,7 +3,7 @@
 ##1.游戏支付流程
 PK玩SDK支付流程图如下所示:<br>
 
-![image](images/image.jpg)<br>
+![image](images/image.png)<br>
 
 ##2.游戏支付结果通知
 
