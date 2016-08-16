@@ -36,7 +36,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 ```
 **设置渠道号：**
 ```xml
-<meta-data android:name="PKWAN_CHANNEL_ID" android:value="YUWAN_CHANNEL" />
+<meta-data android:name="PKWAN_CHANNEL_ID" android:value="PKWAN_CHANNEL" />
 ```
 **添加Android组件声明(注意横竖屏区别)：**  
 
