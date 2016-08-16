@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_floatContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pk_float_bg_right"
+    android:gravity="center_vertical"
+    android:paddingLeft="2dp"
+    android:paddingRight="12dp"
+    android:paddingTop="13dp"
+    android:paddingBottom="13dp">
+
+    <ImageView
+        android:id="@+id/iv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/pk_float_account_selector" />
+
+    <ImageView
+        android:id="@+id/iv_prefecture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:src="@drawable/pk_float_prefecture_selector" />
+
+    <ImageView
+        android:id="@+id/iv_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:src="@drawable/pk_float_service_selector" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="18dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:src="@drawable/pk_float_message_selector" />
+        <ImageView
+            android:id="@+id/red_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/red_dot"
+            android:visibility="gone"
+            android:layout_gravity="right"/>
+    </FrameLayout>
+
+</LinearLayout>

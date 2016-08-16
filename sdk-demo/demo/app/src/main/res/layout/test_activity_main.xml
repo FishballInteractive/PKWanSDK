@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#dedede">
+    <Button
+        android:id="@+id/pay_btn"
+        android:background="@drawable/btn_backbround"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:visibility="invisible"
+        android:text="商品：昆仑天晶\n价格：1元\n\n点击支付" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_role"
+        android:background="@drawable/btn_backbround"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:text="创建角色\n(游戏中创建角色时需提交游戏信息)"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:background="@drawable/btn_backbround"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="登录" />
+</RelativeLayout>
