@@ -21,13 +21,8 @@ import com.pkwan.sdk.interfaces.OnPayProcessListener;
 
 public class MainActivity extends Activity {
 	//使用时需把下面参数换成CP自己的appid和appkey
-/*
     private String appid = "appid";
     private String appkey = "appkey";
-*/
-
-    private String appid = "100030";
-    private String appkey = "B904EC49796ACEA96ADFA3E4EBB5D8E7";
 	private View pay_btn;
     private View createRole;
     private View login_btn;
