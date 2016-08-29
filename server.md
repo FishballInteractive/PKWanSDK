@@ -19,7 +19,7 @@ PK玩SDK支付提供电话卡支付，支付宝支付和银联等多种支付方
 |:---|:---|
 |game_id|	商户ID|
 |order_id|CP订单ID|
-|total_fee|订单金额，单位：元|
+|total_fee|订单金额，单位：分|
 |tran_code|PK玩订单号|
 |enc_string|签名（CP服务端收到回调后需验证该参数）|
 |user_id|用户uid|
