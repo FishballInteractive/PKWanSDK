@@ -23,7 +23,7 @@ PK玩SDK支付提供电话卡支付，支付宝支付和银联等多种支付方
 |tran_code|交易码|
 |enc_string|签名（CP服务端收到回调后需验证该参数）|
 |user_id|用户uid|
-|pay_status|	支付状态码 (0为支付成功,只有支付成功才会通知游戏服务器)|
+|pay_status|	支付状态码 (1为支付成功,只有支付成功才会通知游戏服务器)|
 |note|	透传参数（客户端API参数中通过setNote设置） 购买时客户端应用通过API传入，原样返回给应用服务器，开发者可以利用该字段，定义自己的扩展数据。例如区分游戏服务器|
 PK玩SDK服务器发送的请求链接如下示例:
 http:// NoticeUrl? game_id=xx&order_id=xx&total_fee=xx&tran_code=xx
