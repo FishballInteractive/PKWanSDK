@@ -267,7 +267,7 @@ void PkCommplatform.pay(RgBuyInfo buyInfo, OnPayProcessListener payListener);
 ```java
 String orderId = UUID.randomUUID().toString(); // 订单id，必须唯一，必须设置
 String itemName = "昆仑天晶";// 道具名称 必须设置
-int gredit = 100;// 支付金额 必须设置，单位：元
+int gredit = 100;// 支付金额 必须设置，单位：分
 String note = "原样返回给游戏服务器";// 透传参数，可不设置
 PkBuyInfo buyInfo = new PkBuyInfo(orderId, itemName, gredit);
 buyInfo.setNote(note);
