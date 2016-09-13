@@ -52,7 +52,7 @@
             android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
             android:theme="@android:style/Theme.Translucent" />
 		 <!-- PK玩SDK渠道标识，CP不用做任何修改 -->
-        <meta-data android:name="PKWAN_CHANNEL_ID" android:value="246" />
+        <meta-data android:name="PKWAN_CHANNEL_ID" android:value="PKWAN_CHANNEL" />
     </application>
 
 </manifest>
