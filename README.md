@@ -326,7 +326,7 @@ String PkCommplatform.getToken(Context context);
 ```java
 String roleName ="一只小菜鸟";
 String serverName ="金戈铁马（12服）";
-RgRoleInfo roleInfo = new RgRoleInfo(roleName,serverName);
+PkRoleInfo roleInfo = new PkRoleInfo(roleName,serverName);
 ```
 
 
