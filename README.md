@@ -43,7 +43,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 **横屏：**
 ```xml
 <!-- YuWanPaySDK横屏组件声明start-->
-	<activity
+	  <activity
             android:name="com.pkwan.sdk.ui.PkAccountActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
@@ -93,7 +93,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 **竖屏：**
 ```xml
 <!-- YuWanPaySDK竖屏组件声明start-->
-	<activity
+	  <activity
             android:name="com.pkwan.sdk.ui.PkAccountActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
