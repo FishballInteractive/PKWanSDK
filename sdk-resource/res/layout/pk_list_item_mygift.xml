@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="false"
+    android:padding="9dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_game_icon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="#ff0000"
+            android:layout_marginRight="9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txt_title"
+            android:layout_alignTop="@+id/img_game_icon"
+            android:layout_toRightOf="@+id/img_game_icon"
+            android:layout_toEndOf="@+id/img_game_icon"
+            android:singleLine="true"
+            android:textSize="13sp"
+            android:textColor="#333333" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有效期"
+            android:textSize="10sp"
+            android:layout_below="@+id/txt_title"
+            android:layout_toRightOf="@+id/img_game_icon"
+            android:layout_toEndOf="@+id/img_game_icon"
+            android:textColor="#979797"
+            android:id="@+id/textView8"/>
+
+      <!--  <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txt_expiry"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:textColor="#979797"
+            android:layout_below="@+id/textView8"
+            android:layout_toRightOf="@+id/img_game_icon"
+            android:layout_toEndOf="@+id/img_game_icon" />-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复制"
+            android:id="@+id/txt_copy"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/pk_gift_converting"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#16c367"
+            android:textSize="10sp"
+            android:visibility="visible"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txt_code"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/txt_copy"
+            android:layout_toStartOf="@+id/txt_copy"
+            android:background="#f8f8f8"
+            android:visibility="visible"
+            android:textColor="#333333"
+            android:textSize="10sp"
+            android:padding="4dp" />
+    </RelativeLayout>
+</LinearLayout>

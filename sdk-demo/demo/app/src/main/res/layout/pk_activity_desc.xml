@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="9dp"
+    android:background="#f0f0f0">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_activity_desc"
+        android:textColor="#333333"
+        android:textSize="11sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginRight="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_activity_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pk_activity_left_desc"
+            android:gravity="center"
+            android:textColor="#ff7200"
+            android:textSize="9sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="进行中"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#979797"
+            android:textSize="9sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:text="123456"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/tv_update_time"/>
+    </LinearLayout>
+</LinearLayout>

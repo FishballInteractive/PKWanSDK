@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#db214c" >
+    android:layout_height="43dp"
+    android:background="#2c3339" >
 
     <ImageView
         android:id="@+id/iv_goback"
@@ -10,18 +10,18 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:paddingBottom="8dp"
-        android:paddingLeft="10dp"
+        android:paddingLeft="25dp"
         android:paddingRight="15dp"
         android:paddingTop="8dp"
-        android:src="@drawable/pk_goback" />
+        android:src="@drawable/pk_float_back_icon" />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
         android:text="@string/re_title"
-        android:textColor="#ffffff"
-        android:textSize="18sp" />
-
+        android:textColor="#db355c"
+        android:textSize="16sp" />
 </RelativeLayout>

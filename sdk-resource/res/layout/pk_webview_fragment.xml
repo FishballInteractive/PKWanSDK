@@ -5,14 +5,10 @@
     android:background="@color/app_background"
     android:orientation="vertical" >
 
-    <include
-        android:id="@+id/layout_title"
-        layout="@layout/pk_title_layout" />
-
     <com.pkwan.sdk.ui.widget.PkWebViewLayout
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
 
 </LinearLayout>

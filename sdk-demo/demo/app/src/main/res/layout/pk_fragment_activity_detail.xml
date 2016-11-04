@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:id="@+id/tv_msg_title"
+                android:textSize="11sp"
+                android:text="123456"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:singleLine="true"
+                android:enabled="true"
+                android:ellipsize="end"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_activity_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pk_activity_left_desc"
+                    android:gravity="center"
+                    android:textColor="#ff7200"
+                    android:textSize="9sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="进行中"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#979797"
+                    android:textSize="9sp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:text="123456"
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/tv_update_time"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f5f5f5"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"/>
+
+            <com.pkwan.sdk.ui.widget.PkWebviewProgressBar
+                android:id="@+id/progressbar_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:overScrollMode="never"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_jump"
+                android:paddingRight="43dp"
+                android:paddingLeft="43dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:textSize="14sp"
+                android:text="立即参加"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/pk_activity_jumping_background"
+                android:visibility="gone"/>
+</LinearLayout>

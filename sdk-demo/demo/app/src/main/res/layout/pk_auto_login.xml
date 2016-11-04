@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@drawable/pk_account_bg"
+        android:background="#2c3339"
         android:orientation="vertical"
         android:padding="40dp" >
 
@@ -20,16 +20,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pk_my_accounts"
-                android:textColor="#4c4c4c"
-                android:textSize="16sp" />
+                android:textColor="#dbdbdb"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tv_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pk_user_name"
-                android:textColor="#dc224c"
-                android:textSize="16sp" />
+                android:textColor="#dbdbdb"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -43,14 +43,14 @@
                 android:id="@+id/progressBar"
                 style="@android:style/Widget.ProgressBar.Small"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" android:indeterminate="false"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pk_logining"
-                android:textColor="#4c4c4c"
-                android:textSize="16sp" />
+                android:textColor="#db355c"
+                android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
 

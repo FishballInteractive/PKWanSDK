@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="9dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_gift_title"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        android:text="礼包的Title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_gift_desc"
+            android:textColor="#979797"
+            android:textSize="10sp"
+            android:text="礼包的Desc"
+            android:singleLine="true"
+            android:enabled="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="领取"
+        android:textColor="#eb4c3c"
+        android:textSize="10sp"
+        android:background="@drawable/pk_app_setting"
+        android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:id="@+id/tv_gift_state"/>
+
+</LinearLayout>

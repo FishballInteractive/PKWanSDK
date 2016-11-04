@@ -2,50 +2,89 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-    >
+                android:gravity="center">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/pk_account_bg"
+        android:background="#2c3339"
         android:orientation="vertical"
-        android:paddingBottom="18dp"
-        android:paddingLeft="18dp"
-        android:paddingRight="18dp"
-        android:paddingTop="15dp" >
+        android:id="@+id/ll_container">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <ImageView
+            android:layout_height="wrap_content"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:background="#23292d"
+            android:paddingBottom="11dp"
+            android:paddingTop="13dp">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@drawable/pk_login_title" />
-        </RelativeLayout>
+                android:textColor="#db355c"
+                android:textSize="16sp"
+                android:text="PK玩"
+                android:id="@+id/tv_login_view_title"/>
 
-        <TextView
-            android:id="@+id/tv_prompt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ff8a00" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:src="@drawable/pk_annoucement_back"
+                android:id="@+id/iv_cancel"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/et_parent"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/pk_account_edittext_bg"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp" >
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_phone_bind_srate"
+                android:text="*已绑定手机"
+                android:textColor="#b2b2b2"
+                android:textSize="12sp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="6dp"/>
+
             <LinearLayout
                 android:id="@+id/et_user"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                >
+                android:background="#444a4f"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_mobile"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#db355c"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="6dp"/>
+
                 <com.pkwan.sdk.ui.widget.RgEditTextWithDel
                     android:id="@+id/et_username"
                     style="@style/CustomEditTextTheme"
@@ -53,67 +92,297 @@
                     android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#808080"
                     android:hint="请输入手机号"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:textSize="13sp"/>
+
                 <Button
                     android:id="@+id/open_poupwindow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/pk_down_arrow"/>
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/pk_down_arrow"
+                    android:visibility="visible"
+                    android:layout_marginRight="6dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="9dp"
+                android:gravity="center_vertical"
+                android:id="@+id/ll_sms_container"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp">
 
-                <com.pkwan.sdk.ui.widget.RgEditTextWithDel
-                    android:id="@+id/et_password"
-                    style="@style/CustomEditTextTheme"
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:hint="请输入验证码"
-                    android:inputType="number" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7.5"
+                    android:orientation="horizontal"
+                    android:background="#444a4f">
 
-            <!--    <View
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#ff0000"/>-->
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center_vertical"
-                    android:src="@drawable/pk_login_divider" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_sms"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#db355c"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"/>
+
+                    <com.pkwan.sdk.ui.widget.RgEditTextWithDel
+                        android:id="@+id/et_password"
+                        style="@style/CustomEditTextTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@android:color/transparent"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#808080"
+                        android:hint="验证码"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/tv_forgotPassword"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
                     android:layout_height="match_parent"
-                    android:layout_gravity="right|center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_horizontal"
                     android:gravity="center"
                     android:text="获取验证码"
-                    android:textColor="#ff0000"
-                    android:textStyle="normal" />
+                    android:textColor="#ffffff"
+                    android:textStyle="normal"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="number"
+                    android:background="#444a4f"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_password_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#444a4f"
+                android:gravity="center_vertical"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_password"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#db355c"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="6dp"/>
+
+                <com.pkwan.sdk.ui.widget.RgEditTextWithDel
+                    android:id="@+id/et_user_password"
+                    style="@style/CustomEditTextTheme"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#808080"
+                    android:hint=""
+                    android:inputType="textPassword"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:id="@+id/ll_other_container"
+                android:gravity="center_vertical"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp">
+
+                <TextView
+                    android:id="@+id/tv_login_tips"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="我已阅并同意用户注册服务协议"
+                    android:textColor="#979797"
+                    android:textSize="10sp"
+                    android:drawableLeft="@drawable/user_login_protocol_agree"
+                    android:drawablePadding="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="忘记密码？"
+                    android:textColor="#dbdbdb"
+                    android:textSize="11sp"
+                    android:id="@+id/tv_get_back_password"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginLeft="17dp"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:text="免注册登录"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="8dp"
+                android:background="@drawable/pk_login_button_background"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:id="@+id/rl_about_login_container">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一键试玩"
+                    android:textColor="#b2b2b2"
+                    android:textSize="12sp"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/icon_random_account"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/tv_random_account"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手工注册"
+                    android:textColor="#b2b2b2"
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/icon_register"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/tv_register"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账号登录"
+                    android:textColor="#b2b2b2"
+                    android:textSize="12sp"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/icon_switch_account"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/tv_switch_user_account"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*尚未绑定手机\r\n请联系客服QQ:1503892660或者咨询PK玩内客服重置密码"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                android:id="@+id/tv_forgotPassword_desc"
+                android:layout_marginRight="17dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="16dp"/>
+
         </LinearLayout>
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:src="@drawable/pk_login" />
+            android:src="@drawable/pk_login"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"/>
 
-     <!--   <ImageView
-            android:id="@+id/btn_register"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一键试玩"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/user_login_protocol_agree"
+                android:drawablePadding="5dp"
+                android:id="@+id/tv_random_user"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手工注册"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/user_login_protocol_agree"
+                android:drawablePadding="5dp"
+                android:id="@+id/tv_register"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="切换账号"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/user_login_protocol_agree"
+                android:drawablePadding="5dp"
+                android:id="@+id/tv_switch_user_account"/>
+
+
+        </RelativeLayout>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/pk_register_btn_normal" />
--->
+            android:text="*尚未绑定手机\r\n请联系客服QQ:1503892660或者咨询PK玩内客服重置密码"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:id="@+id/tv_bottom_login_desc"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"/>-->
     </LinearLayout>
 </RelativeLayout>

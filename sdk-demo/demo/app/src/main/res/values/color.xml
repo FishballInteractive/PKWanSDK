@@ -8,4 +8,8 @@
 	<color name="input_text_color">#FF505050</color>
     <color name="white">#ffffff</color>
     <color name="main_bg">#f8f8f8</color>
+	<color name="pk_float_left_background">#23292d</color>
+    <color name="pk_float_account_text_letf_color">#333333</color>
+    <color name="pk_float_account_text_right_color">#979797</color>
+    <color name="pk_devider_background">#f0f0f0</color>
 </resources>

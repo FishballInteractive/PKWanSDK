@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pk_msg_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:paddingBottom="11dp"
+        android:paddingTop="13dp"
+        android:gravity="center_vertical"
+        android:id="@+id/title_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#db355c"
+            android:textSize="16sp"
+            android:text="提示"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_dialog_title"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:scaleType="center"
+            android:src="@drawable/pk_annoucement_dialog_close"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_dismiss"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#dddddd"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:text="手机号"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="6dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e8e8e8"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"/>
+
+        <com.pkwan.sdk.ui.widget.RgEditTextWithDel
+            android:id="@+id/et_mobile"
+            style="@style/CustomEditTextTheme"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:textColor="#979797"
+            android:textColorHint="#979797"
+            android:inputType="number"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="9dp"
+        android:gravity="center_vertical"
+        android:id="@+id/ll_sms_container"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="horizontal"
+            android:background="#dddddd">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                android:text="验证码"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e8e8e8"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"/>
+
+            <com.pkwan.sdk.ui.widget.RgEditTextWithDel
+                android:id="@+id/et_sms"
+                style="@style/CustomEditTextTheme"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:textColor="#979797"
+                android:textColorHint="#979797"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textSize="13sp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_account_dialog_get_sms"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="获取验证码"
+            android:textColor="#666666"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:layout_marginLeft="5dp"
+            android:inputType="number"
+            android:background="#dddddd"
+            android:visibility="visible"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textColor="#db355c"
+        android:text="确定"
+        android:textSize="15sp"
+        android:id="@+id/tv_confirm"/>
+</LinearLayout>

@@ -21,5 +21,14 @@
         <item name="android:textColor">@color/input_text_color</item>
         <item name="android:textColorHint">@color/edittext_hint_color_default</item>
     </style>
-
+    <style name="Theme_Transparent" parent="android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="anim_window">
+        <item name="android:windowExitAnimation">@anim/out_anim</item>
+        <item name="android:windowEnterAnimation">@anim/enter_anim</item>
+    </style>
 </resources>

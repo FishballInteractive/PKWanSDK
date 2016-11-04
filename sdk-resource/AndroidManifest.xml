@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yuwan.middle.demo" >
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
 
     <application>
         <activity
@@ -34,7 +36,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
         </activity>
         <activity
-            android:name="com.pkwan.sdk.ui.PkFloatWindowActivity"
+            android:name="com.pkwan.sdk.ui.PkMsgDialogActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
@@ -46,13 +48,16 @@
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustResize">
         </activity>
- 
+        <activity
+            android:name="com.pkwan.sdk.ui.PkRegisterProtocolActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
         <activity
             android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
             android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
             android:theme="@android:style/Theme.Translucent" />
-		 <!-- PK玩SDK渠道标识，CP不用做任何修改 -->
-        <meta-data android:name="PKWAN_CHANNEL_ID" android:value="PKWAN_CHANNEL" />
-    </application>
 
 </manifest>

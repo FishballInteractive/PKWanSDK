@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pk_float_left_background"
+    android:gravity="center_horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:id="@+id/tab_left">
+
+    <com.pkwan.sdk.ui.widget.CircleImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/iv_account_icon"
+        android:src="@drawable/pk_account_icon"
+        android:alpha="1.0"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/msg_container"
+        android:layout_marginTop="20dp"
+        android:alpha="1.0">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:id="@+id/v_msg_left"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:background="#db214c"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_msg_icon"
+            android:src="@drawable/pk_float_msg_icon"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv_msg_icon"
+            android:layout_gravity="center"
+            android:textSize="11sp"
+            android:text="@string/pk_float_msg"
+            android:layout_marginTop="4dp"
+            android:paddingBottom="6dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/gift_container"
+        android:layout_marginTop="6dp">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:id="@+id/v_gift_left"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:background="#db214c"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_gift_icon"
+            android:src="@drawable/pk_float_gift_icon"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv_gift_icon"
+            android:layout_gravity="center"
+            android:textSize="11sp"
+            android:text="@string/pk_float_gift"
+            android:layout_marginTop="4dp"
+            android:paddingBottom="6dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/activity_container"
+        android:layout_marginTop="6dp">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:id="@+id/v_activity_left"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:background="#db214c"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_activity_icon"
+            android:src="@drawable/pk_float_activity_icon"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv_activity_icon"
+            android:layout_gravity="center"
+            android:textSize="11sp"
+            android:text="@string/pk_float_activity"
+            android:layout_marginTop="4dp"
+            android:paddingBottom="6dp"/>
+    </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="#979797"
+            android:textSize="11sp"
+            android:id="@+id/tv_sdk_versionname"/>
+</LinearLayout>

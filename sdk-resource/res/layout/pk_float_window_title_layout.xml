@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
- 		android:layout_height="wrap_content"
+ 		android:layout_height="43dp"
  		android:orientation="vertical">
 	<RelativeLayout
 	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:background="#db214c" >
+	    android:layout_height="match_parent"
+	    android:background="#2c3339" >
+			<View
+				android:layout_width="1dp"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:background="#db355c"/>
+
 			<ImageView
 			    android:id="@+id/back"
 			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:src="@drawable/pk_goback"
-			    android:layout_centerVertical="true"
-			    android:layout_marginLeft="14dp"/>
+			    android:layout_height="match_parent"
+			    android:src="@drawable/pk_float_back_icon"
+				android:paddingLeft="6dp"
+				android:paddingRight="6dp"
+			    android:layout_marginLeft="8dp"
+				android:visibility="gone"/>
 		    <ImageView
-		        android:id="@+id/iv_goback"
+		        android:id="@+id/iv_go_gift_store"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:layout_alignParentRight="true"
 		        android:layout_centerVertical="true"
 		        android:paddingBottom="8dp"
-		        android:paddingLeft="12dp"
-		        android:paddingRight="12dp"
+		        android:paddingLeft="8dp"
+		        android:paddingRight="8dp"
 		        android:paddingTop="8dp"
-		        android:src="@drawable/pk_goback_game" />
+		        android:src="@drawable/pk_float_gift_store_icon"
+				android:visibility="gone"/>
 		    <TextView
 		        android:id="@+id/tv_title"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:layout_centerInParent="true"
-		        android:text="账号"
-		        android:textColor="#ffffff"
+		        android:textColor="#db355c"
                 android:singleLine="true"
                 android:ellipsize="end"
                 android:maxEms="20"
-		        android:textSize="18sp" />
+		        android:textSize="16sp" />
 	</RelativeLayout>
 	<View android:layout_width="match_parent"
 	    android:layout_height="1dp"

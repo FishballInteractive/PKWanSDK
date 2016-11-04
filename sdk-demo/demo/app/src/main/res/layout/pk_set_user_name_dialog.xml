@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pk_msg_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="11dp"
+        android:paddingTop="13dp"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:gravity="center_vertical"
+        android:id="@+id/title_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#db355c"
+            android:textSize="16sp"
+            android:text="设置账号"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_dialog_title"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:scaleType="center"
+            android:src="@drawable/pk_annoucement_dialog_close"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_dismiss"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#dddddd"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:text="账号"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="6dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e8e8e8"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"/>
+
+        <com.pkwan.sdk.ui.widget.RgEditTextWithDel
+            android:id="@+id/et_account"
+            style="@style/CustomEditTextTheme"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:textColor="#979797"
+            android:textColorHint="#979797"
+            android:hint="账号(字母开头，6-12个字符)"
+            android:inputType="text"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#dddddd"
+        android:gravity="center_vertical"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:text="密码"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="6dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e8e8e8"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"/>
+
+        <com.pkwan.sdk.ui.widget.RgEditTextWithDel
+            android:id="@+id/et_password"
+            style="@style/CustomEditTextTheme"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="请输入6-12位英文字母或数字"
+            android:textColor="#979797"
+            android:textColorHint="#979797"
+            android:inputType="text"
+            android:textSize="13sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textColor="#db355c"
+        android:text="设置"
+        android:textSize="15sp"
+        android:id="@+id/tv_confirm"/>
+
+</LinearLayout>

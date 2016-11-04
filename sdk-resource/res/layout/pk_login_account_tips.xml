@@ -13,5 +13,6 @@
         android:divider="#dedede"
         android:dividerHeight="1dp"
         android:layout_marginBottom="1dp"
-    />
+        android:scrollbars="none"
+        android:overScrollMode="never"/>
 </LinearLayout>
