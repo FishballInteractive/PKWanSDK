@@ -1,3 +1,5 @@
+#SDK当前最新版本：2.0.0
+
 #一.PK玩SDK构成
 ------
 PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成。
@@ -24,105 +26,117 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 ##2.配置AndroidManifest.xml
 **添加以下权限：**
 ```xml
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-<uses-permission android:name="android.permission.GET_TASKS" />
-<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-<uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
-```
-**设置渠道号：**
-```xml
-<meta-data android:name="PKWAN_CHANNEL_ID" android:value="PKWAN_CHANNEL" />
-```
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+ <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+ <uses-permission android:name="android.permission.INTERNET" />
+ <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+ <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+ <uses-permission android:name="android.permission.GET_TASKS" />
+ <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+ <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+ <uses-permission android:name="android.permission.VIBRATE"/>
+ <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
 **添加Android组件声明(注意横竖屏区别)：**  
 
 **横屏：**
 ```xml
 <!-- YuWanPaySDK横屏组件声明start-->
-<activity
-	android:name="com.pkwan.sdk.ui.PkAccountActivity"
-	android:configChanges="keyboardHidden|orientation|screenSize"
-	android:label="@string/app_name"
-	android:screenOrientation="landscape"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar"
-	android:windowSoftInputMode="adjustPan">
-</activity>
-<activity
-	android:name="com.pkwan.sdk.ui.PkPayDetailActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="landscape"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar">
-</activity>
-<activity
-	android:name="com.pkwan.sdk.ui.PkPayActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="landscape"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar">
-</activity>
-<activity
-	android:name="com.pkwan.sdk.ui.PkFloatWindowActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="landscape"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar">
-</activity>
-<activity
-	android:name="com.pkwan.sdk.ui.PkWebViewActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="landscape"
-	android:theme="@android:style/Theme.Light.NoTitleBar"
-	android:windowSoftInputMode="adjustResize">
-</activity>
-<activity
-        android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
-        android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
-        android:theme="@android:style/Theme.Translucent" />
+	<activity
+            android:name="com.pkwan.sdk.ui.PkAccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkPayDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkMsgDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkRegisterProtocolActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
 
 <!-- YuWanPaySDK横屏组件声明end-->
 ```
 **竖屏：**
 ```xml
 <!-- YuWanPaySDK竖屏组件声明start-->
-<activity
-	android:name="com.pkwan.sdk.ui.PkAccountActivity"
-	android:configChanges="keyboardHidden|orientation|screenSize"
-	android:label="@string/app_name"
-	android:screenOrientation="portrait"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar"
-	android:windowSoftInputMode="adjustPan">
-</activity>
-<activity
-	android:name="com.pkwan.sdk.ui.PkPayDetailActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="portrait"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar">
-</activity>
-<activity
-	android:name="com.pkwan.sdk.ui.PKPayActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="portrait"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar">
-</activity>
-<activity
-	android:name="com.pkwan.sdk.ui.PKFloatWindowActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="portrait"
-	android:theme="@android:style/Theme.Translucent.NoTitleBar">
-</activity>
-<activity
-	android:name="com.pkwan.sdk.ui.PkWebViewActivity"
-	android:configChanges="orientation|keyboardHidden|screenSize"
-	android:screenOrientation="portrait"
-	android:theme="@android:style/Theme.Light.NoTitleBar"
-	android:windowSoftInputMode="adjustResize">
-</activity>
-<activity
-        android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
-        android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
-        android:theme="@android:style/Theme.Translucent" />
+	<activity
+            android:name="com.pkwan.sdk.ui.PkAccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkPayDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkMsgDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.pkwan.sdk.ui.PkRegisterProtocolActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
 <!-- YuWanPaySDK竖屏组件声明end-->
 ```
 #四.接入API
