@@ -239,8 +239,8 @@ void PkCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
 PkCommplatform.addOnLogoutListener(new OnLogoutListener() {
 	@Override
 	public void onLogout() {
-// 注销帐号处理逻辑，以下代码仅为示例代码，cp可根据自身需要进行操作，如重新弹出登录界面等
-		Intent i = getPackageManager().getLaunchIntentForPackage(getPackageName());
+// 注销帐号处理逻辑，cp可根据自身需要进行操作，重新弹出登录界面或是重启游戏		
+Intent i = getPackageManager().getLaunchIntentForPackage(getPackageName());
 		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		startActivity(i);
 	}
