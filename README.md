@@ -24,7 +24,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 把PKWanPaySDK-x.x.x.jar包添加至构建路径，并将资源文件复制到您工程的相应目录。
 如果您的工程里没有android-support-v4.jar包的话，需要将该jar包拷贝至libs目录下，并添加至构建路径。
 ## 2.配置AndroidManifest.xml
-** 添加以下权限：**
+**添加以下权限：**
 ```xml
  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -38,9 +38,9 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
  <uses-permission android:name="android.permission.VIBRATE"/>
  <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
 
-** 添加Android组件声明(注意横竖屏区别)：**  
+**添加Android组件声明(注意横竖屏区别)：**  
 
-** 横屏：**
+**横屏：**
 ```xml
 <!-- YuWanPaySDK横屏组件声明start-->
 	  <activity
@@ -90,7 +90,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 
 <!-- YuWanPaySDK横屏组件声明end-->
 ```
-** 竖屏：**
+**竖屏：**
 ```xml
 <!-- YuWanPaySDK竖屏组件声明start-->
 	  <activity
