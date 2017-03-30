@@ -24,6 +24,12 @@
         android:layout_centerVertical="true"
         android:orientation="horizontal"
         android:layout_marginLeft="9dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_img"
+            android:visibility="gone"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

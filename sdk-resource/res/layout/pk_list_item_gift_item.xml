@@ -4,10 +4,13 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="9dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp"
     android:gravity="center_vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -15,23 +18,31 @@
         android:layout_marginRight="10dp">
 
         <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_gift_title"
         android:textColor="#333333"
         android:textSize="12sp"
         android:text="礼包的Title"/>
-
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_gift_identifies"
+            android:layout_toRightOf="@+id/tv_gift_title"
+            android:layout_alignBottom="@+id/tv_gift_title"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="4dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_gift_desc"
+            android:layout_below="@+id/tv_gift_title"
             android:textColor="#979797"
             android:textSize="10sp"
             android:text="礼包的Desc"
             android:singleLine="true"
             android:enabled="true"/>
-    </LinearLayout>
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
