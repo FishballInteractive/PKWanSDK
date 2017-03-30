@@ -19,12 +19,12 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 7.将应用提交给PK玩运营团队进行审核。  
 
 8.审核通过后，与商务人员确定应用推广的渠道相关事宜。  
-#三.SDK环境搭建
-##1.复制SDK包里的资源到您的工程下的对应目录
+# 三.SDK环境搭建
+## 1.复制SDK包里的资源到您的工程下的对应目录
 把PKWanPaySDK-x.x.x.jar包添加至构建路径，并将资源文件复制到您工程的相应目录。
 如果您的工程里没有android-support-v4.jar包的话，需要将该jar包拷贝至libs目录下，并添加至构建路径。
-##2.配置AndroidManifest.xml
-**添加以下权限：**
+## 2.配置AndroidManifest.xml
+** 添加以下权限：**
 ```xml
  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -38,9 +38,9 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
  <uses-permission android:name="android.permission.VIBRATE"/>
  <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
 
-**添加Android组件声明(注意横竖屏区别)：**  
+** 添加Android组件声明(注意横竖屏区别)：**  
 
-**横屏：**
+** 横屏：**
 ```xml
 <!-- YuWanPaySDK横屏组件声明start-->
 	  <activity
@@ -90,7 +90,7 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
 
 <!-- YuWanPaySDK横屏组件声明end-->
 ```
-**竖屏：**
+** 竖屏：**
 ```xml
 <!-- YuWanPaySDK竖屏组件声明start-->
 	  <activity
@@ -139,8 +139,8 @@ PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成
             android:theme="@android:style/Theme.Translucent" />
 <!-- YuWanPaySDK竖屏组件声明end-->
 ```
-#四.接入API
-##1.初始化SDK
+# 四.接入API
+## 1.初始化SDK
 ```java
 void PkCommplatform.init(Context context, PkAppInfo appInfo, OnInitCompleteListener 	onInitCompleteListener);
 ```
@@ -154,7 +154,7 @@ void PkCommplatform.init(Context context, PkAppInfo appInfo, OnInitCompleteListe
 
 >* 初始化状态回调(initCode)：成功返回PkConstant.INIT_SUCCESS，失败返回PkConstant.INIT_FAILED。
 
-**使用示例：**
+** 使用示例：**
 ```java
 //参数分别为AppId  AppKey  论坛ID，由PK玩运营人员分配
 PkAppInfo appInfo = new PkAppInfo("10000002", "aeb92e964c1cf89a9ddc717b9a2b9fcc");
@@ -167,12 +167,12 @@ PkCommplatform.init(this, appInfo, new OnInitCompleteListener() {
 	}
 });
 ```
-##2.销毁SDK
+## 2.销毁SDK
 ```java
 void PkCommplatform.destory();
 ```
 >* 用来释放SDK资源，在应用的主Activity的onDestory()方法中调用。
-**使用示例：**
+** 使用示例：**
 ```java
 @Override
 protected void onDestroy() {
@@ -181,7 +181,7 @@ protected void onDestroy() {
 }
 ```
 
-##3.登录
+## 3.登录
 
 ```java
 void PkCommplatform.login(OnLoginProcessListener loginProcessListener)
@@ -194,7 +194,7 @@ void PkCommplatform.login(OnLoginProcessListener loginProcessListener)
 
 >* 登陆状态回调(loginCode)：成功返回PkConstant.LOGIN_SUCCESS，失败返回PkConstant.LOGIN_FAILED，用户取消登陆框时返回PkConstant.LOGIN_CANCELED。
 
-**使用示例：**
+** 使用示例：**
 ```java
 private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 		@Override
@@ -224,7 +224,7 @@ btn_login.setOnClickListener(new OnClickListener() {
 });
 ```
 
-##4.注销
+## 4.注销
 ```java
 void PkCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
 ```
@@ -234,7 +234,7 @@ void PkCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
 
 >* **注销账号会调用注销接口。**
 
-**使用示例：**
+** 使用示例：**
 ```java
 PkCommplatform.addOnLogoutListener(new OnLogoutListener() {
 	@Override
@@ -247,7 +247,7 @@ Intent i = getPackageManager().getLaunchIntentForPackage(getPackageName());
 });
 ```
 
-##5.显示悬浮窗
+## 5.显示悬浮窗
 ```java
 void PkCommplatform.showFloatWindow(Activity activity)
 ```
@@ -255,7 +255,7 @@ void PkCommplatform.showFloatWindow(Activity activity)
 
 >* activity：确保为游戏主Activity。
 
-**使用示例：**
+** 使用示例：**
 ```java
 private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 		@Override
@@ -266,8 +266,8 @@ private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 		}
 	};
 ```
-##6.支付
-###a.支付接口说明
+## 6.支付
+### a.支付接口说明
 ```java
 void PkCommplatform.pay(RgBuyInfo buyInfo, OnPayProcessListener payListener);
 ```
@@ -309,7 +309,7 @@ case PkConstant.PAY_CANCEL:// 支付取消
 });
 ```
 
-**最后，使用支付请注意以下几点：**
+** 最后，使用支付请注意以下几点：**
 >* 异步购买要求应用有自己的业务服务器，同时虚拟物品必须通过业务服务器获取。  
 
 >* 应用程序客户端只能从服务器获取用户所拥有的虚拟物品的信息，不能本地缓存。例如： 用户通过异步购买，买了一个虚拟物品“战神斧”。购买结束后，用户打开“背包”查看自己的物品信息，背包里的物品信息必须是从服务器获取的。客户端不能在购买行为结束后，为用户加入“战神斧”物品，必须从自己的业务服务器获取！只有自己的业务服务器确认并发回用户拥有了战神斧物品的信息，应用程序才能认为用户确实获得了该物品。  
@@ -318,25 +318,25 @@ case PkConstant.PAY_CANCEL:// 支付取消
 
 >* buyInfo.setNote购买时客户端应用通过API传入，通过NoticeUrl原样返回给游戏服务器，开发者可利用该字段定义自己的扩展数据。例如区分游戏服务器，实现指定服务器充值。
 
-###b.支付结果通知
+### b.支付结果通知
 使用异步购买，支付结果将以消息的方式通知到您的业务服务器或者服务端虚拟商店中。应用接入方需要在RgBuyInfo中回传通知地址。您的业务服务器需要处理用户的支付结果通知。接收由鱼丸互动移动开发平台服务器发送给各个应用服务的支付购买结果。服务端对接方式和相应的数据格式具体参见[服务端对接说明文档](server.md)。
 
-##7.判断是否已登陆
+## 7.判断是否已登陆
 ```java
 boolean PkCommplatform.isLogined(Context context);
 ```
-##8.获取当前登陆验证的token
+## 8.获取当前登陆验证的token
 ```java
 String PkCommplatform.getToken(Context context);
 ```
-##9.上报角色、区服信息
+## 9.上报角色、区服信息
 在玩家创建角色完成后调用
 ```java
  void PkCommplatform.submitPlayerInfo(PkRoleInfo roleInfo)
 ```
 >* roleInfo：角色、区服信息  
 
-**使用示例：**
+** 使用示例：**
 ```java
 String roleName ="一只小菜鸟";
 String serverName ="金戈铁马（12服）";
@@ -345,7 +345,7 @@ PkRoleInfo roleInfo = new PkRoleInfo(roleName,serverName);
 
 
 **注意：init、login、pay、destory、showFloatWindow这几个方法请务必在主线程调用。**
-#五.混淆
+# 五.混淆
 鱼丸互动SDK 包是以 jar包及资源文件提供给用户的，其中jar包已经半混淆状态，您在混淆自 己 APK 包的时候请不要将鱼丸互动SDK的jar包一起混淆，因为里面有些自定义 UI 控件，若被混淆后会因为无法找到相关类而抛异常。
 您可以在用 ant 构建混淆包的 build.xml 里面对应位置或者在 proguard.cfg 里加入：
 ```java
