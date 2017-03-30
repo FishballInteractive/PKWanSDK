@@ -1,9 +1,9 @@
-#SDK当前最新版本：2.1.0
+# SDK当前最新版本：2.2.0
 
-#一.PK玩SDK构成
+# 一.PK玩SDK构成
 ------
 PK玩SDK由SDK架包，依赖包，SDK所需的资源文件和示例工程组成。
-#二.SDK接入流程简要描述
+# 二.SDK接入流程简要描述
 1.获取(商户Id)AppId 和AppKey、(密钥) AppSecret
 
 2.搭建 SDK 的环境，导入 SDK 的必要文件，参见 SDK开发环境搭建。  
