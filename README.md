@@ -154,7 +154,7 @@ void PkCommplatform.init(Context context, PkAppInfo appInfo, OnInitCompleteListe
 
 >* 初始化状态回调(initCode)：成功返回PkConstant.INIT_SUCCESS，失败返回PkConstant.INIT_FAILED。
 
-** 使用示例：**
+**使用示例：**
 ```java
 //参数分别为AppId  AppKey  论坛ID，由PK玩运营人员分配
 PkAppInfo appInfo = new PkAppInfo("10000002", "aeb92e964c1cf89a9ddc717b9a2b9fcc");
@@ -172,7 +172,7 @@ PkCommplatform.init(this, appInfo, new OnInitCompleteListener() {
 void PkCommplatform.destory();
 ```
 >* 用来释放SDK资源，在应用的主Activity的onDestory()方法中调用。
-** 使用示例：**
+**使用示例：**
 ```java
 @Override
 protected void onDestroy() {
@@ -194,7 +194,7 @@ void PkCommplatform.login(OnLoginProcessListener loginProcessListener)
 
 >* 登陆状态回调(loginCode)：成功返回PkConstant.LOGIN_SUCCESS，失败返回PkConstant.LOGIN_FAILED，用户取消登陆框时返回PkConstant.LOGIN_CANCELED。
 
-** 使用示例：**
+**使用示例：**
 ```java
 private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 		@Override
@@ -234,7 +234,7 @@ void PkCommplatform.addOnLogoutListener(OnLogoutListener onLogoutListener)
 
 >* **注销账号会调用注销接口。**
 
-** 使用示例：**
+**使用示例：**
 ```java
 PkCommplatform.addOnLogoutListener(new OnLogoutListener() {
 	@Override
@@ -255,7 +255,7 @@ void PkCommplatform.showFloatWindow(Activity activity)
 
 >* activity：确保为游戏主Activity。
 
-** 使用示例：**
+**使用示例：**
 ```java
 private OnLoginProcessListener mLoginCallback = new OnLoginProcessListener() {
 		@Override
@@ -309,7 +309,7 @@ case PkConstant.PAY_CANCEL:// 支付取消
 });
 ```
 
-** 最后，使用支付请注意以下几点：**
+**最后，使用支付请注意以下几点：**
 >* 异步购买要求应用有自己的业务服务器，同时虚拟物品必须通过业务服务器获取。  
 
 >* 应用程序客户端只能从服务器获取用户所拥有的虚拟物品的信息，不能本地缓存。例如： 用户通过异步购买，买了一个虚拟物品“战神斧”。购买结束后，用户打开“背包”查看自己的物品信息，背包里的物品信息必须是从服务器获取的。客户端不能在购买行为结束后，为用户加入“战神斧”物品，必须从自己的业务服务器获取！只有自己的业务服务器确认并发回用户拥有了战神斧物品的信息，应用程序才能认为用户确实获得了该物品。  
@@ -336,7 +336,7 @@ String PkCommplatform.getToken(Context context);
 ```
 >* roleInfo：角色、区服信息  
 
-** 使用示例：**
+**使用示例：**
 ```java
 String roleName ="一只小菜鸟";
 String serverName ="金戈铁马（12服）";
