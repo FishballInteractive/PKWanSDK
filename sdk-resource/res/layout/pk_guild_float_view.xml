@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:id="@+id/guild_float_container">
+    <com.pkwan.sdk.ui.widget.CircleImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/iv_guild_float"
+        android:alpha="1.0"/>
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:id="@+id/iv_guild_float_right_dot"
+        android:src="@drawable/red_dot"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"/>
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:id="@+id/iv_guild_float_left_dot"
+        android:src="@drawable/red_dot"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"/>
+</FrameLayout>
