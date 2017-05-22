@@ -64,6 +64,8 @@ PK玩SDK服务器返回的参数如下：
   "avatar":"xxx",
   "nickname":"xxx",
   "gender":"xxx",
+  "isRealName":true,
+  "isAdult": true
 }}
 
 登录失败
